@@ -1,10 +1,18 @@
 import React, { Component } from 'react';
 import StripeCheckout from 'react-stripe-checkout';
+import axios from 'axios';
 import './App.css';
 
 class App extends Component {
   onToken = token => {
-    console.log('token: ', token);
+    axios
+      .post('http://localhost:3001/api/checkout', { token: token.id })
+      .then(res => {
+        console.log('res: ', res);
+      })
+      .catch(err => {
+        console.log('ther was an error', err);
+      });
   };
 
   render() {
