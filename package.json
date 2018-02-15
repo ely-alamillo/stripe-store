@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/ely-alamillo/stripe-store/issues"
   },
-  "homepage": "https://github.com/ely-alamillo/stripe-store#readme"
+  "homepage": "https://github.com/ely-alamillo/stripe-store#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "stripe": "^5.4.0"
+  }
 }
