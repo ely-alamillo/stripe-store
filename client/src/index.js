@@ -1,6 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+
+// import './index.scss';
+import 'grommet/scss/vanilla/index.scss';
+
 import App from './App';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const element = document.getElementById('root');
+ReactDOM.render(<App />, element);
