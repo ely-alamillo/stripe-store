@@ -23,6 +23,7 @@ server.use(cors(corsOptions));
 server.use(express.static(path.join(__dirname, 'client/build')));
 
 server.post('/api/checkout', (req, res) => {
+  console.log('checkout starting...');
   const { token } = req.body;
   if (!token) return res.json({ err: 'Payment Failed' });
   stripe.charges.create(
@@ -39,6 +40,6 @@ server.post('/api/checkout', (req, res) => {
   );
 });
 
-server.listen(3001, () => {
-  console.log('server running on port 3001');
+server.listen(3021, () => {
+  console.log('server running on port 3021');
 });
