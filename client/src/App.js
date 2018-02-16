@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import StripeCheckout from 'react-stripe-checkout';
 import axios from 'axios';
+import Button from 'grommet/components/Button';
 import './App.css';
 
 class App extends Component {
@@ -29,6 +30,7 @@ class App extends Component {
           token={this.onToken}
           stripeKey="pk_test_lQChvBC3SslCU83lTaDxPst5"
         />
+        <Button label="Label" href="#" />
       </div>
     );
   }
