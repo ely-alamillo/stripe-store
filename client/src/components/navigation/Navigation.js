@@ -1,19 +1,16 @@
-import react from 'react';
+import React from 'react';
 import Header from 'grommet/components/Header';
 import Title from 'grommet/components/Title';
 import Box from 'grommet/components/Box';
 import Search from 'grommet/components/Search';
 import Menu from 'grommet/components/Menu';
 import Anchor from 'grommet/components/Anchor';
+import Actions from 'grommet/components/icons/base/Actions';
 
 const Navigation = props => {
-  return <h1 style={{ color: red }}>Hello peeps</h1>;
-};
-export default Navigation;
-
-{
-  /* <Header>
-      <Title>Sample Title</Title>
+  return (
+    <Header>
+      <Title>Stripe Shop</Title>
       <Box flex={true} justify="end" direction="row" responsive={false}>
         <Search
           inline={true}
@@ -30,5 +27,7 @@ export default Navigation;
           <Anchor href="#">Third</Anchor>
         </Menu>
       </Box>
-    </Header> */
-}
+    </Header>
+  );
+};
+export default Navigation;
