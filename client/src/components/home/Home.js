@@ -10,6 +10,7 @@ import Heading from 'grommet/components/Heading';
 import Image from 'grommet/components/Image';
 import Section from 'grommet/components/Section';
 import Paragraph from 'grommet/components/Paragraph';
+import heroImg from '../../images/hero-img.jpg';
 
 import axios from 'axios';
 // import './App.scss';
@@ -20,13 +21,7 @@ class Home extends Component {
       <Box>
         <App className="App" centered={false}>
           <Hero
-            background={
-              <Image
-                src="http://www.arte-d.it/wp-content/uploads/2016/11/S_tait_AM-2.jpg"
-                fit="cover"
-                full={true}
-              />
-            }
+            background={<Image src={heroImg} fit="cover" full={true} />}
             backgroundColorIndex="dark"
           >
             <Box direction="row" justify="center" align="center">
@@ -40,8 +35,7 @@ class Home extends Component {
           </Hero>
           <Section>
             <Box direction="row" justify="center" align="center">
-              <Box basis="1/4" align="end" pad="medium" />
-              <Box basis="1/2" align="center" pad="medium">
+              <Box align="center" pad="medium">
                 <Heading margin="none">Sample Heading Two</Heading>
                 <Paragraph>
                   Raised on hip-hop and foster care, defiant city kid Ricky gets
@@ -55,7 +49,6 @@ class Home extends Component {
                   differences and survive as a family.
                 </Paragraph>
               </Box>
-              <Box basis="1/4" align="end" pad="medium" />
             </Box>
           </Section>
         </App>
