@@ -6,6 +6,7 @@ import Store from './components/store/store';
 import App from 'grommet/components/App';
 import Box from 'grommet/components/Box';
 import Navigation from './components/navigation/Navigation';
+import Footer from './components/footer/Footer';
 
 class Shell extends Component {
   render() {
@@ -17,6 +18,7 @@ class Shell extends Component {
             <Route path="/store" component={Store} />
             <Route path="/" component={Home} />
           </Switch>
+          <Footer />
         </App>
       </Box>
     );
