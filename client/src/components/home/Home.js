@@ -38,7 +38,7 @@ class Home extends Component {
               </Box>
             </Box>
           </Hero>
-          <Section style={{ border: '2px solid green' }}>
+          <Section>
             <Box direction="row" justify="center" align="center">
               <Box basis="1/4" align="end" pad="medium" />
               <Box basis="1/2" align="center" pad="medium">
