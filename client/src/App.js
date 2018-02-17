@@ -1,18 +1,21 @@
 import React, { Component } from 'react';
-import { Route, withRouter } from 'react-router-dom';
+import { Route, withRouter, Switch } from 'react-router-dom';
+import Navgation from './components/navigation/Navigation';
 import Home from './components/home/Home';
+import Store from './components/store/store';
 import App from 'grommet/components/App';
+import Navigation from './components/navigation/Navigation';
 
 class Shell extends Component {
   render() {
     return (
-      <App className="App">
-        <header className="App-header">
-          {/* <img src={logo} className="App-logo" alt="logo" /> */}
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <Route path="/" exact component={Home} />
-      </App>
+      <div>
+        <Navigation />
+        {/* <Switch>
+          <Route path="/store" component={Store} />
+          <Route path="/" component={Home} />
+        </Switch> */}
+      </div>
     );
   }
 }

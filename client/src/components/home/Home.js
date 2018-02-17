@@ -9,26 +9,10 @@ import axios from 'axios';
 // import './App.scss';
 
 class Home extends Component {
-  onToken = token => {
-    axios
-      .post('http://localhost:3021/api/checkout', { token: token.id })
-      .then(res => {
-        console.log('res: ', res);
-      })
-      .catch(err => {
-        console.log('ther was an error', err);
-      });
-  };
-
   render() {
     return (
       <App className="App">
         <p className="App-intro">Home page yo</p>
-        <StripeCheckout
-          token={this.onToken}
-          stripeKey="pk_test_lQChvBC3SslCU83lTaDxPst5"
-        />
-        <Button label="Label" href="#" />
       </App>
     );
   }
