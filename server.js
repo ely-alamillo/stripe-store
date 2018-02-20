@@ -40,6 +40,7 @@ server.post('/api/checkout', (req, res) => {
   );
 });
 
-server.listen(3021, () => {
+server.listen(3021, err => {
+  if (err) console.log('Error starting up the server!');
   console.log('server running on port 3021');
 });
