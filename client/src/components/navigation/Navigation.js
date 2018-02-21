@@ -12,33 +12,27 @@ import App from 'grommet/components/App';
 
 const Navigation = props => {
   return (
-    <Box pad="medium">
-      <Header>
-        <Title>Stripe Shop</Title>
-        <Box flex={true} justify="end" direction="row" responsive={false}>
-          {/* <Search
+    <Header pad="small" fixed={true}>
+      <Title>Stripe Shop</Title>
+      <Box flex={true} justify="end" direction="row" responsive={false}>
+        {/* <Search
           inline={true}
           fill={true}
           size="medium"
           placeHolder="Search"
           dropAlign={{ right: 'right' }}
         /> */}
-          <Menu
-            icon={<Actions />}
-            dropAlign={{ right: 'right' }}
-            inline={true}
-            direction="row"
-          >
-            <LinkContainer to={'/'}>
-              <Anchor>Home</Anchor>
-            </LinkContainer>
-            <LinkContainer to={'/store'}>
-              <Anchor>Store</Anchor>
-            </LinkContainer>
-          </Menu>
-        </Box>
-      </Header>
-    </Box>
+        <Menu
+          icon={<Actions />}
+          dropAlign={{ right: 'right' }}
+          inline={true}
+          direction="row"
+        >
+          <Anchor path={{ path: '/', index: true }}>Home</Anchor>
+          <Anchor path="/store">Store</Anchor>
+        </Menu>
+      </Box>
+    </Header>
   );
 };
 export default Navigation;
