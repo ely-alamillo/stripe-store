@@ -11,6 +11,8 @@ import Tiles from 'grommet/components/Tiles';
 import Section from 'grommet/components/Section';
 import Card from 'grommet/components/Card';
 import Image from 'grommet/components/Image';
+import Paragraph from 'grommet/components/Paragraph';
+import Heading from 'grommet/components/Heading';
 import Headphones from '../../images/headphones.jpg';
 import axios from 'axios';
 // import './App.scss';
@@ -33,8 +35,8 @@ class Home extends Component {
 
   render() {
     return (
-      <section className="App">
-        <p className="App-intro"> Products Available</p>
+      <Section pad="small">
+        <Heading strong> Products Available</Heading>
 
         <Tiles flush={false} fill={true}>
           {this.state.items.map(item => {
@@ -45,22 +47,36 @@ class Home extends Component {
                   label="Audiophile"
                   heading="Bancor Wireless Headphones"
                   description="These headphones will definitely take you to another dimension of hearing."
+                  link={
+                    <div>
+                      <StripeCheckout
+                        token={this.onToken}
+                        stripeKey="pk_test_lQChvBC3SslCU83lTaDxPst5"
+                        name="Stripe Shop"
+                        panelLabel="Buy Now"
+                        currency="USD"
+                        email="support@stripeshop.com"
+                        shippingAddress
+                        bitcoin
+                        onClose={() => this.setState({ clicked: false })}
+                      >
+                        <Button
+                          label="Pay With Stripe"
+                          fill={true}
+                          primary
+                          onClick={() => this.setState({ clicked: true })}
+                        />
+                      </StripeCheckout>
+                    </div>
+                  }
                 />
               </Tile>
             );
           })}
         </Tiles>
-      </section>
+      </Section>
     );
   }
 }
 
 export default Home;
-
-{
-  /* <StripeCheckout
-          token={this.onToken}
-          stripeKey="pk_test_lQChvBC3SslCU83lTaDxPst5"
-        />
-        <Button label="Label" href="#" /> */
-}
